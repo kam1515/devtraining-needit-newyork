@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Admin" sequence="3" value="admin"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal_us" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources US" sequence="0" value="hr_us"/>
+                <element inactive_on_update="false" label="Human Resources CA" sequence="1" value="hr_ca"/>
+                <element inactive_on_update="false" label="Facilities US" sequence="2" value="facilities_us"/>
+                <element inactive_on_update="false" label="Facilities CA" sequence="3" value="facilities_ca"/>
+                <element inactive_on_update="false" label="Legal US" sequence="4" value="legal_us"/>
+                <element inactive_on_update="false" label="Legal CA" sequence="5" value="legal_ca"/>
+                <element inactive_on_update="false" label="Admin US" sequence="6" value="admin_us"/>
+                <element inactive_on_update="false" label="Admin CA" sequence="7" value="admin_ca"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
